@@ -61,6 +61,8 @@ class ImbalanceMultipleClassDataset:
         """
          人工数据集
         """
+        random_seed = 42
+        np.random.seed(random_seed)  # Set a seed for reproducibility
         A1_mean = [1, 1]
         A1_cov = [[2.0, 0.99], [1, 1]]
         A1 = np.random.multivariate_normal(A1_mean, A1_cov, 600)  # 依据指定的均值和协方差生成数据，size=5
